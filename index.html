@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Інтернет-магазин</title>
+</head>
+<body>
+
+<h2>Категорії</h2>
+<ul id="categories">
+  <li data-category="electronics" style="cursor:pointer; color:blue; text-decoration:underline;">Електроніка</li>
+  <li data-category="books" style="cursor:pointer; color:blue; text-decoration:underline;">Книги</li>
+</ul>
+
+<h2>Товари</h2>
+<div id="products"></div>
+
+<div id="orderForm" style="display:none; margin-top:20px;">
+  <h3>Форма замовлення</h3>
+  <form id="checkoutForm">
+    <p>ПІБ: <input type="text" id="name" required></p>
+    <p>Місто:
+      <select id="city" required>
+        <option value="">-- Виберіть місто --</option>
+        <option>Київ</option>
+        <option>Львів</option>
+        <option>Одеса</option>
+      </select>
+    </p>
+    <p>Склад Нової пошти: <input type="text" id="warehouse" required></p>
+    <p>Оплата:
+      <label><input type="radio" name="payment" value="Накладений платіж" required> Накладений платіж</label>
+      <label><input type="radio" name="payment" value="Оплата на рахунок"> Оплата на рахунок</label>
+    </p>
+    <p>Кількість: <input type="number" id="quantity" min="1" value="1" required></p>
+    <p>Коментар: <br><textarea id="comment"></textarea></p>
+    <button type="submit">Підтвердити замовлення</button>
+  </form>
+</div>
+
+<div id="orderResult" style="margin-top:20px;"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
